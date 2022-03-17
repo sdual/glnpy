@@ -41,5 +41,4 @@ class Linear:
     def predict(self, logit, context, target=None):
         distances = np.matmul(self._context_maps, context.T)
         mapped_context_binary = (distances > self._context_bias).astype(int)
-
         pass
